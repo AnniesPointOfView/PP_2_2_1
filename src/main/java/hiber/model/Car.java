@@ -16,7 +16,7 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    @OneToOne(mappedBy = "car")
+    @OneToOne(mappedBy = "car", fetch = FetchType.LAZY)
     private User user;
 
     public Car() {
